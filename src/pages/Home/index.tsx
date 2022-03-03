@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { HashLink as Link } from "react-router-hash-link";
 import creature from "./../../images/creature.jpeg";
 import styles from "./styles.module.css";
 import me from "./../../images/me.png";
@@ -27,7 +27,7 @@ export function Home() {
 
   return (
     <main>
-      <section className={styles.home}>
+      <section className={styles.home} id="home">
         <div className={styles.text}>
           <h1>Hi,</h1>
           <h1>
@@ -59,7 +59,7 @@ export function Home() {
         </div>
       </section>
 
-      <section>
+      <section id="about">
         <h2 className="section-title">About</h2>
         <div className={styles.about}>
           <img src={creature} alt="" />
@@ -75,7 +75,7 @@ export function Home() {
         </div>
       </section>
 
-      <section className={styles.work}>
+      <section className={styles.work} id="work">
         <h2 className="section-title">Previous work</h2>
         <div className={styles.workDivs}>
           {projects.map((work) => (
@@ -90,15 +90,15 @@ export function Home() {
         </Link>
       </section>
 
-      <section>
+      <section id="contact">
         <h2 className="section-title">Contact</h2>
 
         <div className={styles.contact}>
-            <input type="text" placeholder="Name" />
-            <input type="mail" placeholder="Email"  />
-            <input type="mail" placeholder="Where did you find me?"  />
-            <textarea name="" placeholder="Message" ></textarea>
-            <p className={styles.button} >Send message</p>
+          <input type="text" placeholder="Name" />
+          <input type="mail" placeholder="Email" />
+          <input type="mail" placeholder="Where did you find me?" />
+          <textarea name="" placeholder="Message"></textarea>
+          <p className={styles.button}>Send message</p>
         </div>
       </section>
     </main>

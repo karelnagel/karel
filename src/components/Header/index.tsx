@@ -1,6 +1,6 @@
-import { Link } from "react-router-dom";
 import styles from "./styles.module.css";
 
+import { HashLink as Link } from "react-router-hash-link";
 export function Header() {
   return (
     <nav>
