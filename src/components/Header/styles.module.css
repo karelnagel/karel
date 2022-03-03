@@ -1,0 +1,17 @@
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 600;
+  color: black;
+  padding: 20px 80px;
+}
+
+.menu * {
+  margin: 10px;
+  color: black;
+}
+
+.logo {
+  font-size: 24px;
+}
