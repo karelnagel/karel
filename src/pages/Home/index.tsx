@@ -20,7 +20,7 @@ function calcAge() {
 }
 
 export function Home() {
-  const titles = ["Web3 developer", "Blockchain enthusiast", "HODLER", "Fullstack developer", "Tesla fanboy", "Estonian"];
+  const titles = ["Web3 developer", "Blockchain enthusiast", "HODLER", "Fullstack developer", "Estonian", "Skiier"];
   const [age, setAge] = useState(calcAge());
   const [index, setIndex] = useState(0);
   const [sending, setSending] = useState(false);
@@ -63,11 +63,11 @@ export function Home() {
         <div className={styles.text}>
           <h1>Hi,</h1>
           <h1>
-            I am <span className={styles.name}>Karel</span>
+            I am <span className="firstColor">Karel</span>
           </h1>
-          <h1 className={styles.title}>{titles[index]}</h1>
+          <h1>{titles[index]}</h1>
 
-          <Link to="#contact" className={styles.button}>
+          <Link to="#contact" className="button">
             Contact me
           </Link>
 
@@ -89,11 +89,11 @@ export function Home() {
       </section>
 
       <section id="about">
-        <h2 className="section-title">About</h2>
+        <h2 className={styles.sectionTitle}>About</h2>
         <div className={styles.about}>
           <img src={creature} alt="" />
           <div>
-            <h2>I am Karel,</h2>
+            <h3>I am Karel,</h3>
             <p>
               a <b>{age.years}</b> year <b>{age.days}</b> day <b>{age.hours}</b> hour <b>{age.minutes}</b> minute and <b>{age.seconds}</b>-second old
               software developer from <b>Estonia</b>. I have 3+ years of programming experience and over this time I have developed in{" "}
@@ -108,7 +108,7 @@ export function Home() {
       </section>
 
       <section className={styles.workSection} id="work">
-        <h2 className="section-title">Previous work</h2>
+        <h2 className={styles.sectionTitle}>Experience</h2>
         <div className={styles.work}>
           {projects.map((work, i) => (
             <a href={work.link} key={i}>
@@ -120,21 +120,21 @@ export function Home() {
             </a>
           ))}
         </div>
-        <a href="/resume.pdf" className={`${styles.button} ${styles.resume}`}>
+        <a href="/resume.pdf" className={`button ${styles.resume}`}>
           My resume
         </a>
       </section>
 
       <section id="contact">
-        <h2 className="section-title">Contact me</h2>
+        <h2 className={styles.sectionTitle}>Contact me</h2>
 
         <form ref={form} onSubmit={sendEmail} className={styles.contact}>
           <input type="text" placeholder="Name" name="name" />
           <input type="mail" placeholder="Email" name="email" required />
           <input type="mail" placeholder="Where did you find me?" name="where" />
           <textarea placeholder="Message" name="message" required></textarea>
-          <button className={styles.button} type="submit">
-            {sending ? "Sending ..." : "Send message"}
+          <button className="button" type="submit">
+            {sending ? "Sending ..." : "Send"}
           </button>
         </form>
       </section>

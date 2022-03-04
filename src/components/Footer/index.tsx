@@ -3,7 +3,7 @@ import { socials } from "./../../consts";
 import { FaGithub, FaLinkedinIn, FaTwitter } from "react-icons/fa";
 import { useState } from "react";
 export function Footer() {
-  const [animation,setAnimation] =useState(false);
+  const [animation, setAnimation] = useState(false);
   return (
     <div className={styles.footer}>
       <div>
@@ -17,8 +17,12 @@ export function Footer() {
           <FaGithub />
         </a>
       </div>
-      <a href="mailto:karel@karel.wtf" className={styles.email}>karel@karel.wtf</a>
-      <p className={`${styles.title} ${animation ? styles.animation :""}`} onClick={()=>setAnimation(a=>!a)}>Karel</p>
+      <h1 className={`${styles.title} ${animation ? styles.animation : ""}`} onClick={() => setAnimation((a) => !a)}>
+        Karel
+      </h1>
+      <a href="mailto:karel@karel.wtf" className={styles.email}>
+        karel@karel.wtf
+      </a>
     </div>
   );
 }
