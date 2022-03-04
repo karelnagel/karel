@@ -20,7 +20,7 @@ function calcAge() {
 }
 
 export function Home() {
-  const titles = ["Web3 developer", "Blockchain enthusiast", "HODLER", "Fullstack developer", "Estonian", "Skiier"];
+  const titles = ["Web3 developer", "HODLER", "Fullstack developer", "Estonian", "Skiier"];
   const [age, setAge] = useState(calcAge());
   const [index, setIndex] = useState(0);
   const [sending, setSending] = useState(false);
@@ -91,7 +91,9 @@ export function Home() {
       <section id="about">
         <h2 className={styles.sectionTitle}>About</h2>
         <div className={styles.about}>
-          <img src={creature} alt="" />
+          <a href={socials.opensea}>
+            <img src={creature} alt="" />
+          </a>
           <div>
             <h3>I am Karel,</h3>
             <p>
@@ -131,7 +133,7 @@ export function Home() {
         <form ref={form} onSubmit={sendEmail} className={styles.contact}>
           <input type="text" placeholder="Name" name="name" />
           <input type="mail" placeholder="Email" name="email" required />
-          <input type="mail" placeholder="Where did you find me?" name="where" />
+          <input type="text" placeholder="Where did you find me?" name="where" />
           <textarea placeholder="Message" name="message" required></textarea>
           <button className="button" type="submit">
             {sending ? "Sending ..." : "Send"}

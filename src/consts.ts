@@ -9,7 +9,7 @@ export const socials = {
     twitter:"https://twitter.com/karelETH",
     opensea:"https://opensea.io/karelETH",
     github:"https://github.com/karelnagel",
-    linkedin:"https://linkedin.com/karelnagel",
+    linkedin:"https://www.linkedin.com/in/karelnagel/",
     youtube:"https://youtube.com/karelETH",
 }
 export const projects = [
