@@ -1,15 +1,25 @@
 nav {
+  box-shadow: 0px 0px 10px var(--first-color);
+}
+.header{
+  margin:auto;
+  padding: 20px 0px;
+  max-width: 1000px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   font-weight: 600;
   color: black;
-  padding: 20px 80px;
 }
-
 .menu * {
   margin: 10px;
   color: black;
+}
+.menu *:hover,
+.logo:hover {
+  transform: scale(1.1);
+  transition: 0.2s;
+  color: var(--first-color);
 }
 
 .logo {

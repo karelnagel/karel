@@ -15,9 +15,9 @@ export const socials = {
 }
 export const projects = [
     {link:"https://ethdon.xyz/",name:"ethdon.xyz",image:ethdon, description:"Ether"},
-    {link:"https://creatures.karel.wtf",name:"Creature game",image:twitter, description:"A game on Polygon where users have to match Creature NFTs with their twitter handles and get a NFT when finished."},
-    {link:"https://www.mql5.com/en/users/karelnagel",name:"Forex bots",image:twitter, description:"Forex bots that were based on No Nonsense Forex Youtube channel, also Youtube tutorials and paid version."},
-    {link:"https://github.com/karelnagel/autopood",name:"Carwatch.ee",image:twitter, description:"School project that scrapes car sales and sends them to that user who is looking for that car."},
-    {link:"https://fudler.ee/home",name:"Fudler.ee",image:twitter, description:"Estonian startup, where I worked as a tech lead."},
-    {link:"",name:"Tinksmat",image:twitter, description:"Worked there as a junior backend engineer."},
+    {link:"https://creatures.karel.wtf",name:"Creature game",image:ethdon, description:"A game on Polygon where users have to match Creature NFTs with their twitter handles and get a NFT when finished."},
+    {link:"https://www.mql5.com/en/users/karelnagel",name:"Forex bots",image:ethdon, description:"Forex bots that were based on No Nonsense Forex Youtube channel, also Youtube tutorials and paid version."},
+    {link:"https://github.com/karelnagel/autopood",name:"Carwatch.ee",image:ethdon, description:"School project that scrapes car sales and sends them to that user who is looking for that car."},
+    {link:"https://fudler.ee/home",name:"Fudler.ee",image:ethdon, description:"Estonian startup, where I worked as a tech lead."},
+    {link:"",name:"Tinksmat",image:ethdon, description:"Worked there as a junior backend engineer."},
 ];
