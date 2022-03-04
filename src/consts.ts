@@ -1,23 +1,22 @@
-import twitter from "./images/icons/twitter.png"
-import opensea from "./images/icons/opensea.png"
-import github from "./images/icons/github.png"
-import linkedin from "./images/icons/linkedin.png"
-import youtube from "./images/icons/youtube.png"
-
 import ethdon from "./images/projects/ethdon.png"
+import creatures from "./images/projects/creatures.png"
+import forexbot from "./images/projects/forexbot.png"
+import fudler from "./images/projects/fudler.png"
+import tinksmat from "./images/projects/tinksmat.jpeg"
+import carwatch from "./images/projects/carwatch.png"
 
 export const socials = {
-    twitter:{link:"https://twitter.com/karelETH",image:twitter},
-    opensea:{link:"https://opensea.io/karelETH",image:opensea},
-    github:{link:"https://github.com/karelnagel",image:github},
-    linkedin:{link:"https://linkedin.com/karelnagel",image:linkedin},
-    youtube:{link:"https://youtube.com/karelETH",image:youtube},
+    twitter:"https://twitter.com/karelETH",
+    opensea:"https://opensea.io/karelETH",
+    github:"https://github.com/karelnagel",
+    linkedin:"https://linkedin.com/karelnagel",
+    youtube:"https://youtube.com/karelETH",
 }
 export const projects = [
-    {link:"https://ethdon.xyz/",name:"ethdon.xyz",image:ethdon, description:"Ether"},
-    {link:"https://creatures.karel.wtf",name:"Creature game",image:ethdon, description:"A game on Polygon where users have to match Creature NFTs with their twitter handles and get a NFT when finished."},
-    {link:"https://www.mql5.com/en/users/karelnagel",name:"Forex bots",image:ethdon, description:"Forex bots that were based on No Nonsense Forex Youtube channel, also Youtube tutorials and paid version."},
-    {link:"https://github.com/karelnagel/autopood",name:"Carwatch.ee",image:ethdon, description:"School project that scrapes car sales and sends them to that user who is looking for that car."},
-    {link:"https://fudler.ee/home",name:"Fudler.ee",image:ethdon, description:"Estonian startup, where I worked as a tech lead."},
-    {link:"",name:"Tinksmat",image:ethdon, description:"Worked there as a junior backend engineer."},
+    {link:"https://ethdon.xyz/",name:"ethdon.xyz",image:ethdon, description: "Decentralized platform for streamers to accept crypto donations, and users get an NFT for donating."},
+    {link:"https://creatures.karel.wtf",name:"Creature game",image:creatures, description: "A game on Polygon, where users have to match Creature NFTs with their corresponding Twitter handle and get an NFT when they catch all the creatures."},
+    {link:"https://www.mql5.com/en/users/karelnagel",name:"Forex bots",image:forexbot, description: "Based on the No Nonsense Forex Youtube channel, that backtested and traded live with user's strategy. I also made tutorial videos and a premium version."},
+    {link:"https://github.com/karelnagel/autopood",name:"Carwatch.ee",image:carwatch, description: "A website that scrapes new car sales from many websites, shows them on our website, and also sends new offers to Messenger."},
+    {link:"https://fudler.ee/home",name:"Fudler.ee",image:fudler, description: "Estonian startup, that sells unsold food from restaurants. I worked there as a tech lead and took care of the websites and the backend."},
+    {link:"",name:"Tinksmat", image:tinksmat, description: "Estonian company, that worked on a platform for staff management, I worked there as a junior backend engineer and coded in C#."},
 ];

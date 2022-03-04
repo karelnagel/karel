@@ -20,17 +20,23 @@ function calcAge() {
 }
 
 export function Home() {
-  const titles = ["Web3 developer", "Fullstack developer", "Blockchain enthusiast"];
+  const titles = ["Web3 developer", "Blockchain enthusiast", "HODLER", "Fullstack developer", "Tesla fanboy", "Estonian"];
   const [age, setAge] = useState(calcAge());
   const [index, setIndex] = useState(0);
   const [sending, setSending] = useState(false);
   const form = useRef<HTMLFormElement>(null);
 
   const sendEmail = async (e: any) => {
-    setSending(true);
     e.preventDefault();
+    if (sending) return;
+    setSending(true);
     try {
-      const result = await emailjs.sendForm("service_rdhjuqr", "template_gctuyma", form.current!, "aW073kT0d8YmT0MKN");
+      const result = await emailjs.sendForm(
+        process.env.REACT_APP_SERVICE_ID!,
+        process.env.REACT_APP_TEMPLATE_ID!,
+        form.current!,
+        process.env.REACT_APP_USER_ID
+      );
       console.log(result.text);
       form.current?.reset();
     } catch (e) {
@@ -66,13 +72,13 @@ export function Home() {
           </Link>
 
           <div className={styles.socials}>
-            <a href={socials.twitter.link}>
+            <a href={socials.twitter}>
               <FaTwitter />
             </a>
-            <a href={socials.linkedin.link}>
+            <a href={socials.linkedin}>
               <FaLinkedinIn />
             </a>
-            <a href={socials.github.link}>
+            <a href={socials.github}>
               <FaGithub />
             </a>
           </div>
@@ -87,12 +93,15 @@ export function Home() {
         <div className={styles.about}>
           <img src={creature} alt="" />
           <div>
-            <h2>I am Karel</h2>
+            <h2>I am Karel,</h2>
             <p>
-              I am <b>{age.years}</b> years <b>{age.days}</b> days <b>{age.hours}</b> hours <b>{age.minutes}</b> minutes and <b>{age.seconds}</b>{" "}
-              seconds old. Currently I really like developing on Ethereum blockchain. Good at <b>Solidity</b>, <b>React</b>, <b>Typescript</b> and{" "}
-              <b>C#</b>. I have previously <b>worked on two companies</b> as a software developer and I am in University of Tartu studying
-              Informatics. <b>If you have any offers or ideas that you would like to develop with me then contact me.</b>
+              a <b>{age.years}</b> year <b>{age.days}</b> day <b>{age.hours}</b> hour <b>{age.minutes}</b> minute and <b>{age.seconds}</b>-second old
+              software developer from <b>Estonia</b>. I have 3+ years of programming experience and over this time I have developed in{" "}
+              <b>Solidity, React, Typescript, C#, Java, Flutter, and other languages and frameworks</b>. I have worked as a software developer in{" "}
+              <b>two companies</b> and currently <b>studying Informatics</b> at the University of Tartu. For the last 7 months, I have been learning
+              about Ethereum, NFTs, and web3 and have developed some dapps.
+              <br />
+              <b>Currently looking for an idea or a job in web3 space.</b>
             </p>
           </div>
         </div>
@@ -111,9 +120,9 @@ export function Home() {
             </a>
           ))}
         </div>
-        <Link to="resume" className={`${styles.button} ${styles.resume}`}>
+        <a href="/resume.pdf" className={`${styles.button} ${styles.resume}`}>
           My resume
-        </Link>
+        </a>
       </section>
 
       <section id="contact">
@@ -125,7 +134,7 @@ export function Home() {
           <input type="mail" placeholder="Where did you find me?" name="where" />
           <textarea placeholder="Message" name="message" required></textarea>
           <button className={styles.button} type="submit">
-            {sending? "Sending ..." : "Send message"}
+            {sending ? "Sending ..." : "Send message"}
           </button>
         </form>
       </section>

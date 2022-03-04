@@ -3,7 +3,7 @@ import styles from "./styles.module.css";
 import { HashLink as Link } from "react-router-hash-link";
 export function Header() {
   return (
-    <nav>
+    <nav id="top">
       <div className={styles.header}>
       <Link to="/" className={styles.logo}>
         Karel

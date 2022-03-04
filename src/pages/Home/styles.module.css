@@ -61,6 +61,7 @@ button{
 }
 .image img {
   height: 330px;
+  filter: drop-shadow(10px 1px 10px rgba(0,0,0,0.6));
 }
 
 .about {
@@ -77,6 +78,7 @@ button{
 }
 .about b {
   color: var(--first-color);
+  font-weight: 600;
 }
 .about p {
   font-size: 16px;
