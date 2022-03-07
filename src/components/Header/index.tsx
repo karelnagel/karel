@@ -11,7 +11,8 @@ export function Header() {
       <div className={styles.menu}>
         <Link to="#home">Home</Link>
         <Link to="#about">About</Link>
-        <Link to="#work">Work</Link>
+        <Link to="#skills">Skills</Link>
+        <Link to="#projects">Projects</Link>
         <Link to="#contact" className={`button ${styles.contact}`}>Contact me</Link>
       </div>
       </div>

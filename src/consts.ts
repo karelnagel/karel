@@ -4,6 +4,8 @@ import forexbot from "./images/projects/forexbot.png"
 import fudler from "./images/projects/fudler.png"
 import tinksmat from "./images/projects/tinksmat.jpeg"
 import carwatch from "./images/projects/carwatch.png"
+import { GiBrain } from "react-icons/gi";
+import { SiJavascript,SiSolidity,SiCsharp, SiFlutter } from "react-icons/si";
 
 export const socials = {
     twitter:"https://twitter.com/karelETH",
@@ -12,6 +14,7 @@ export const socials = {
     linkedin:"https://www.linkedin.com/in/karelnagel/",
     youtube:"https://youtube.com/karelETH",
 }
+
 export const projects = [
     {link:"https://ethdon.xyz/",name:"ethdon.xyz",image:ethdon, description: "Decentralized platform for streamers to accept crypto donations, and users get an NFT for donating."},
     {link:"https://creatures.karel.wtf",name:"Creature game",image:creatures, description: "A game on Polygon, where users have to match Creature NFTs with their corresponding Twitter handle and get an NFT when they catch all the creatures."},
@@ -20,3 +23,10 @@ export const projects = [
     {link:"https://fudler.ee/home",name:"Fudler.ee",image:fudler, description: "Estonian startup, that sells unsold food from restaurants. I worked there as a tech lead and took care of the websites and the backend."},
     {link:"",name:"Tinksmat", image:tinksmat, description: "Estonian company, that worked on a platform for staff management, I worked there as a junior backend engineer and coded in C#."},
 ];
+export const skills =[
+    {name: "Problem solving", percent:95, icon:GiBrain},
+    {name: "React / TS / JS", percent:85, icon:SiJavascript},
+    {name: "Solidity", percent:85, icon:SiSolidity},
+    {name: "C# / ASP.NET", percent:85, icon:SiCsharp},
+    {name: "Flutter", percent:75, icon:SiFlutter},
+]
