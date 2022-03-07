@@ -2,7 +2,6 @@ import { useEffect, useRef, useState } from "react";
 import { HashLink as Link } from "react-router-hash-link";
 import creature from "./../../images/creature.jpeg";
 import styles from "./styles.module.css";
-import me from "./../../images/me.png";
 import skillsImage from "./../../images/skills.jpeg";
 import { socials, projects, skills } from "./../../consts";
 import { FaGithub, FaLinkedinIn, FaTwitter } from "react-icons/fa";
@@ -85,7 +84,7 @@ export function Home() {
           </div>
         </div>
         <div className={styles.image}>
-          <img src={me} alt="" />
+          <img src="/favicon.png" alt="" />
         </div>
       </section>
 
@@ -101,12 +100,12 @@ export function Home() {
               a <b>{age.years}</b> year <b>{age.days}</b> day <b>{age.hours}</b> hour <b>{age.minutes}</b> minute and <b>{age.seconds}</b>-second old
               software developer from <b>Estonia</b>. 
               <br/>
-              I have <b>3+ years of programming experience</b>, worked as a software developer in{" "}
+              I have <b>3+ years of programming experience</b>, I have worked as a software developer in{" "}
               <b>two companies</b>, and currently <b>studying Informatics</b> at the University of Tartu. 
               <br/>
-              First crypto investments in 2017, but started learning about web3 and developing dapps in summer 2021.
+              I made my first crypto investment in 2017 but started learning about web3 and developing dapps in summer 2021.
               <br />
-              <b>Currently looking for an idea or a job in web3 space.</b>
+              <b>I am looking for an idea or a job in the web3 space.</b>
             </p>
           </div>
         </div>
