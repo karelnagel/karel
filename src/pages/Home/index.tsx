@@ -20,7 +20,7 @@ function calcAge() {
 }
 
 export function Home() {
-  const titles = ["Web3 developer", "HODLER", "Fullstack developer", "2 x Estonian champion", "Problem solver", "Investor"];
+  const titles = ["Web3 developer", "HODLER", "Fullstack developer", "2 x Estonian champion", "Investor"];
   const [age, setAge] = useState(calcAge());
   const [index, setIndex] = useState(0);
   const [sending, setSending] = useState(false);
