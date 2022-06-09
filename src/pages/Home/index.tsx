@@ -1,9 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { HashLink as Link } from "react-router-hash-link";
 import creature from "./../../images/creature.jpeg";
-import styles from "./styles.module.css";
-import skillsImage from "./../../images/skills.jpeg";
-import { socials, projects, skills } from "./../../consts";
+import { socials, projects } from "./../../consts";
 import { FaGithub, FaLinkedinIn, FaTwitter } from "react-icons/fa";
 import emailjs from "@emailjs/browser";
 
@@ -58,20 +56,21 @@ export function Home() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   return (
-    <main>
-      <section className={styles.home} id="home">
-        <div className={styles.text}>
-          <h1>Hi,</h1>
-          <h1>
-            I am <span className="firstColor">Karel</span>
+    <main className="max-w-screen-lg m-auto flex flex-col space-y-10 md:space-y-40 items-center px-2">
+      <section className="flex flex-col-reverse md:flex-row md:items-center py-20 md:pb-32 md:pt-40 w-full" id="home">
+        <div className="md:basis-2/3 flex flex-col items-start w-full">
+          <h1 className="text-4xl md:text-6xl font-bold leading-snug">
+            Hi,
+            <br />I am <span className="text-primary">Karel</span>
+            <br />
+            {titles[index]}
           </h1>
-          <h1>{titles[index]}</h1>
 
-          <Link to="#contact" className="button">
+          <Link to="#contact" className="btn mt-10 md:mt-24 text-3xl font-bold tranlate">
             Contact me
           </Link>
 
-          <div className={styles.socials}>
+          <div className="flex text-4xl mt-4 space-x-8 child-hover:animate-spin child-hover:text-primary duration-200">
             <a href={socials.twitter}>
               <FaTwitter />
             </a>
@@ -83,26 +82,25 @@ export function Home() {
             </a>
           </div>
         </div>
-        <div className={styles.image}>
+        <div className="basis-1/3 rounded-full overflow-hidden bg-primary w-60 m-auto mb-20 md:mb-auto">
           <img src="/favicon.png" alt="" />
         </div>
       </section>
 
       <section id="about">
-        <h2 className={styles.sectionTitle}>About</h2>
-        <div className={styles.about}>
-          <a href={socials.opensea}>
+        <h2>About</h2>
+        <div className="flex flex-col md:flex-row space-y-10 md:space-x-10 items-center justify-between">
+          <a href={socials.opensea} className="basis-1/3 rounded-md overflow-hidden w-3/4">
             <img src={creature} alt="" />
           </a>
-          <div>
+          <div className="basis-2/3 text-xl">
             <h3>I am Karel,</h3>
             <p>
               a <b>{age.years}</b> year <b>{age.days}</b> day <b>{age.hours}</b> hour <b>{age.minutes}</b> minute and <b>{age.seconds}</b>-second old
-              software developer from <b>Estonia</b>. 
-              <br/>
-              I have <b>3+ years of programming experience</b>, I have worked as a software developer in{" "}
-              <b>two companies</b>, and currently <b>studying Informatics</b> at the University of Tartu. 
-              <br/>
+              software developer from <b>Estonia</b>.
+              <br />I have <b>3+ years of programming experience</b>, I have worked as a software developer in <b>two companies</b>, and currently{" "}
+              <b>studying Informatics</b> at the University of Tartu.
+              <br />
               I made my first crypto investment in 2017 but started learning about web3 and developing dapps in summer 2021.
               <br />
               <b>I am looking for an idea or a job in the web3 space.</b>
@@ -111,54 +109,37 @@ export function Home() {
         </div>
       </section>
 
-      <section id="skills">
-        <h2 className={styles.sectionTitle}>Skills</h2>
-        <div className={styles.skills}>
-          <div className={styles.skillsContent}>
-            {skills.map((skill, i) => (
-              <div key={i} className={styles.skill}>
-                <skill.icon />
-                <p>{skill.name}</p>
-                <p>{skill.percent}%</p>
-                <div style={{ width: `${skill.percent}%` }}></div>
-              </div>
-            ))}
-
-            <p> I have also worked with Java, Kotlin, Spring, Python, SQL, Vue and MQL4/5.</p>
-          </div>
-          <div className={styles.skillsImage}>
-            <img src={skillsImage} alt="" />
-          </div>
-        </div>
-      </section>
-
-      <section className={styles.workSection} id="projects">
-        <h2 className={styles.sectionTitle}>Projects</h2>
-        <div className={styles.work}>
+      <section id="projects">
+        <h2>Projects</h2>
+        <div className="grid md:grid-cols-3 gap-6 ">
           {projects.map((work, i) => (
-            <a href={work.link} key={i}>
-              <img src={work.image} alt="" />
-              <div className={styles.workInfo}>
-                <h4>{work.name}</h4>
+            <a
+              href={work.link}
+              key={i}
+              className="relative shadow-md shadow-secondary group hover:scale-110 md:hover:scale-125 hover:z-10 rounded-lg overflow-hidden h-48 duration-300"
+            >
+              <img src={work.image} alt="" className="w-full h-full object-cover" />
+              <div className="absolute top-0 text-center hidden group-hover:block text-white bg-secondary bg-opacity-50 h-full p-4">
+                <h4 className="text-lg font-bold">{work.name}</h4>
                 <p>{work.description}</p>
               </div>
             </a>
           ))}
         </div>
-        <a href="/resume.pdf" className={`button ${styles.resume}`}>
+        <a href="/resume.pdf" className="btn m-auto mt-10 text-xl font-bold">
           My resume
         </a>
       </section>
 
-      <section id="contact">
-        <h2 className={styles.sectionTitle}>Contact me</h2>
+      <section id="contact" className="w-full">
+        <h2>Contact me</h2>
 
-        <form ref={form} onSubmit={sendEmail} className={styles.contact}>
+        <form ref={form} onSubmit={sendEmail} className="flex flex-col space-y-4 items-center max-w-lg m-auto w-full">
           <input type="text" placeholder="Name" name="name" />
           <input type="mail" placeholder="Email" name="email" required />
           <input type="text" placeholder="Where did you find me?" name="where" />
           <textarea placeholder="Message" name="message" required></textarea>
-          <button className="button" type="submit">
+          <button className="btn text-lg font-bold" type="submit">
             {sending ? "Sending ..." : "Send"}
           </button>
         </form>

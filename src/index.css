@@ -1,6 +1,27 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-/* ROOT */
+@layer components {
+  .btn {
+    @apply bg-primary px-4 py-2 rounded-xl text-white font-bold;
+  }
+  h2 {
+    @apply text-center text-3xl font-bold mb-10;
+  }
+  section {
+    @apply flex flex-col;
+  }
+  b {
+    @apply text-primary;
+  }
+  input,
+  textarea {
+    @apply border-secondary border-2 rounded-lg px-4 py-2 text-lg w-full;
+  }
+}
+/* 
 :root {
     --hue-color: 224;
     --first-color: hsl(var(--hue-color), 89%, 60%);
@@ -54,7 +75,6 @@
     color: var(--first-color);
   }
   
-  /* FONTS */
   h1 {
     font-size: 55px;
     color: var(--black-color);
@@ -95,13 +115,7 @@
   
   input,
   textarea {
-    margin: 10px;
-    width: 500px;
-    font-size: 16px;
-    font-weight: 600;
-    padding: 13px;
-    border-radius: 10px;
-    border: 1px solid var(--second-color);
+    @apply m-2 max-w-md w-full text-lg p-2 rounded-lg border-2 border-black ;
   }
   @media (max-width: 800px) {
     h1 {
@@ -126,11 +140,11 @@
       font-size: 20px;
       line-height: 20px;
     }
-    input,
+     input,
     textarea {
       margin: 10px;
       width: 300px;
       font-size: 14px;
     }
-  }
-  
+  } 
+   */
